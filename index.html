@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Labyrinth game</title>
+</head>
+<body>
+    <div id="container">
+        <div id="start-screen">
+            <h1>Labyrinth game</h1>
+            <label>Number of players: <input type="number" min="1" max="4" id="players-num" value="2"></label><br>
+            <label>Number of treasures per player: <input type="number" min="1" max="24" id="treasures-num" value="2"></label><br>
+            <br>
+            <button id="start">Enter the labyrinth!</button>
+            <button id="desc-btn">Show me the description</button>
+            <div id="description">
+                <h1>The game</h1>
+                <p>
+                    The rooms of the labyrinth are represented by the cells of a 7x7 table. Every room has a given number of doors. If two adjacent rooms both have doors on their mutual wall, then the player shall enter from one room to the other. The even rows and columns of the table can be slided, the odd ones are fixed. By sliding the rooms, new routes open in the labyrinth so that the player can reach their treasures. The first player to find all their treasures and get back to their starting corner shall win.
+                </p>
+            </div>
+        </div>
+        <div id="game">
+            <div id="board">
+                <div id="grid">
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="arrow down"></div>
+                    <div class="blank"></div>
+                    <div class="arrow down"></div>
+                    <div class="blank"></div>
+                    <div class="arrow down"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+
+                    <div class="blank"></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div class="blank"></div>
+
+                    <div class="arrow right"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="arrow left"></div>
+                    
+                    <div class="blank"></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div class="blank"></div>
+
+                    <div class="arrow right"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="arrow left"></div>
+
+                    <div class="blank"></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div class="blank"></div>
+
+                    <div class="arrow right"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div class="arrow left"></div>
+
+                    <div class="blank"></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div></div>
+                    <div class="fix"></div>
+                    <div class="blank"></div>
+
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                    <div class="arrow up"></div>
+                    <div class="blank"></div>
+                    <div class="arrow up"></div>
+                    <div class="blank"></div>
+                    <div class="arrow up"></div>
+                    <div class="blank"></div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+            <div id="current-state">
+                <p id="active-player">Current player: </p>
+                <p id="active-treasure">Treasure to find: </p>
+                <p id="already-found">Treasures found: </p>
+                <p>Click on the arrow where you would like to slide in the room below! For turning the room, click on it!</p>
+                <div id="extra-room"></div>
+                <button id="done">Done!</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

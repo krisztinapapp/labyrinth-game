@@ -1,0 +1,101 @@
+html {
+    background-color: rgb(80,80,80);
+    color: beige;
+}
+
+#container {
+    position: absolute;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    width: 720px;
+    display: inline-block;
+    float: left;
+}
+
+#grid {
+    display: grid;
+    padding:0;
+    grid-column-gap:0;
+    grid-row-gap:0;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    width: 720px;
+    height: 720px;
+    background-color: rgb(195,195,195);
+}
+
+#grid div {
+    width:80px;
+    height:80px;
+    padding:0;
+    z-index: 0;
+}
+
+#start-screen {
+    text-align: center;
+    position: relative;
+    display: block;
+    top: 150px;
+    font-size: 150%;
+}
+
+#start-screen h1 {
+    bottom: 40px;
+    font-size: 200%;
+}
+
+#description {
+    width: 500px;
+    font-size: 70%;
+}
+
+#desc-btn, #start {
+    width: 150px;
+    height: 80px;
+    background-color: beige;
+    color: rgb(80,80,80);
+    font-size: 80%;
+}
+
+#current-state {
+    display: inline-block;
+    float: left;
+    width: 380px;
+}
+
+#current-state p {
+    text-align: center;
+    display: block;
+}
+
+#current-state button {
+    position: relative;
+    display: block;
+    margin: 0;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 30px;
+}
+
+#extra-room {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width:100px;
+    height:100px;
+    background-color: beige;
+}
+#extra-room img {
+    display: block;
+    margin: auto;
+}
